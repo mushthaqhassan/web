@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUSTHU — Data Scientist & Founder, Orryzen</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+</style>
+</head>
+<body>
+
+<!-- CANVAS STARFIELD -->
+<canvas id="starfield"></canvas>
+<!-- SCROLL PROGRESS -->
+<div id="scroll-prog"></div>
+<!-- BACK TO TOP -->
+<a href="#hero" id="back-top" aria-label="Back to top">↑</a>
+<!-- CURSOR -->
+<div id="c-cursor"></div>
+<div id="c-follower"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-name" aria-hidden="true">
+    <span>M</span><span>U</span><span>S</span><span>T</span><span>H</span><span>U</span>
+  </div>
+  <div class="loader-progress-wrap">
+    <div class="loader-progress-bar" id="loaderBar"></div>
+  </div>
+  <div class="loader-pct" id="loaderPct">0%</div>
+  <div class="loader-sub">Data Scientist &amp; Founder — Orryzen</div>
+</div>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#orryzen">Orryzen</a>
+  <a href="#experience">Journey</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">MUSTHU</a>
+  <div class="nav-pill">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#orryzen">Orryzen</a>
+    <a href="#experience">Journey</a>
+  </div>
+  <a href="#contact" class="nav-hire">Hire Me</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+
+  <!-- Spotlight cones -->
+  <div class="hero-spotlight-cone"></div>
+  <div class="hero-spotlight-cone-2"></div>
+  <div class="hero-floor-glow"></div>
+
+  <!-- Dot grid + scanlines + vignette -->
+  <div class="hero-dotgrid"></div>
+  <div class="hero-scanlines"></div>
+  <div class="hero-vignette"></div>
+
+  <!-- Cursor-tracked glow -->
+  <div class="hero-cursor-glow" id="heroCursorGlow"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="hero-particles"></canvas>
+
+  <!-- Decorative elements -->
+  <div class="hero-left-line"></div>
+  <div class="hero-side-text">Data Scientist · <span>Orryzen</span> · Founder · 2026</div>
+
+  <!-- Floating data badges -->
+  <div class="hero-float-badge hfb1">model.accuracy = <span class="val">97.4%</span></div>
+  <div class="hero-float-badge hfb2">Orryzen<span class="val">.launch()</span> ✓</div>
+  <div class="hero-float-badge hfb3">X_train.fit() → <span class="val">done</span></div>
+  <div class="hero-float-badge hfb4">projects = <span class="val">20+</span></div>
+
+  <!-- Main content -->
+  <div class="hero-main">
+
+    <div class="hero-eyebrow">
+      <div class="eyebrow-dot"></div>
+      <span class="eyebrow-text">Data Scientist &amp; Founder — India</span>
+      <span class="eyebrow-badge">Open to Work · 2026</span>
+    </div>
+
+    <div class="hero-name-block">
+      <div class="hero-name">
+        <span class="hero-name-inner">MUSTHU</span>
+      </div>
+    </div>
+
+    <div class="hero-role-line">
+      <div class="hero-role-divider"></div>
+      <span class="hero-role-text" id="heroRoleText">Data Scientist</span>
+      <div class="hero-role-divider right"></div>
+    </div>
+
+    <p class="hero-tagline">
+      I turn <strong>raw data</strong> into sharp decisions and bold ideas into
+      <strong>products that ship</strong>. Founder of Orryzen —
+      building at the edge of AI and business.
+    </p>
+
+    <div class="hero-cta-group">
+      <a href="#projects" class="cta-main">
+        View Work <span class="cta-arrow">↗</span>
+      </a>
+      <a href="#contact" class="cta-ghost">Let's Talk</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">20+</span>
+        <span class="hero-stat-label">Projects</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">15+</span>
+        <span class="hero-stat-label">Skills</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">3Y</span>
+        <span class="hero-stat-label">Experience</span>
+      </div>
+    </div>
+
+  </div><!-- /hero-main -->
+
+  <div class="hero-ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">Data Science <span class="ticker-sep"></span> <span>Orryzen</span></span>
+      <span class="ticker-item">Machine Learning <span class="ticker-sep"></span> <span>Python</span></span>
+      <span class="ticker-item">AI Products <span class="ticker-sep"></span> <span>Deep Learning</span></span>
+      <span class="ticker-item">NLP · LLMs <span class="ticker-sep"></span> <span>Startup Founder</span></span>
+      <span class="ticker-item">Analytics <span class="ticker-sep"></span> <span>Computer Vision</span></span>
+      <span class="ticker-item">Web Development <span class="ticker-sep"></span> <span>Flask · FastAPI</span></span>
+      <span class="ticker-item">Data Science <span class="ticker-sep"></span> <span>Orryzen</span></span>
+      <span class="ticker-item">Machine Learning <span class="ticker-sep"></span> <span>Python</span></span>
+      <span class="ticker-item">AI Products <span class="ticker-sep"></span> <span>Deep Learning</span></span>
+      <span class="ticker-item">NLP · LLMs <span class="ticker-sep"></span> <span>Startup Founder</span></span>
+      <span class="ticker-item">Analytics <span class="ticker-sep"></span> <span>Computer Vision</span></span>
+      <span class="ticker-item">Web Development <span class="ticker-sep"></span> <span>Flask · FastAPI</span></span>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════ MARQUEE DIVIDER ══════════════ -->
+<div class="marquee-div">
+  <div class="marquee-div-track">
+    <span class="marquee-div-item">Data Science <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Machine Learning <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Orryzen <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">AI Products <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Deep Learning <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">NLP & LLMs <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Web Development <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Analytics <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Data Science <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Machine Learning <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Orryzen <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">AI Products <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Deep Learning <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">NLP & LLMs <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Web Development <span class="marquee-div-dot"></span></span>
+    <span class="marquee-div-item">Analytics <span class="marquee-div-dot"></span></span>
+  </div>
+</div>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about">
+  <div class="s-label r"><span class="s-num">01</span> &nbsp; About Me</div>
+  <div class="about-layout">
+    <div class="about-visual r-left">
+      <div class="avatar-frame">
+        <div class="avatar-glow-ring"></div>
+        <div class="avatar-glow-ring-2"></div>
+        <div class="avatar-inner">
+          <div class="avatar-letter">M</div>
+          <div class="avatar-title">Musthu · Founder · Data Scientist</div>
+        </div>
+      </div>
+      <div class="av-card av-card-1 r d3">
+        <div class="av-card-num" data-target="20">0+</div>
+        <div class="av-card-txt">Projects Shipped</div>
+      </div>
+      <div class="av-card av-card-2 r d2">
+        <div class="av-card-num" style="color:var(--electric)" data-target="15">0+</div>
+        <div class="av-card-txt">Skills Mastered</div>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <h2 class="about-lead r">
+        Where <span class="hl">Data</span> Meets<br>Product Thinking
+      </h2>
+      <p class="about-body r d1">
+        I'm <strong>Musthu</strong> — a data scientist and the founder of <strong>Orryzen</strong>, a tech startup I built from zero. My work sits exactly where <strong>machine learning meets business execution</strong>: I don't just build accurate models, I build things that ship and create value.
+      </p>
+      <p class="about-body r d2">
+        My foundation is a <strong>BCA degree</strong> combined with years of relentless self-study, real client work, and building actual products. I work across the entire stack — from raw data wrangling and model training to deploying APIs and building dashboards people actually want to use.
+      </p>
+
+      <div class="about-chips r d3">
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Deep Learning</span>
+        <span class="chip">NLP</span>
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">TensorFlow</span>
+        <span class="chip">Flask</span>
+        <span class="chip">Power BI</span>
+        <span class="chip">Startup Ops</span>
+        <span class="chip">OpenAI APIs</span>
+      </div>
+
+      <div class="about-counters r d4">
+        <div class="a-count">
+          <span class="a-count-n" data-counter="20">0</span>
+          <span class="a-count-l">Projects</span>
+        </div>
+        <div class="a-count">
+          <span class="a-count-n" data-counter="15">0</span>
+          <span class="a-count-l">Skills</span>
+        </div>
+        <div class="a-count">
+          <span class="a-count-n" data-counter="3">0</span>
+          <span class="a-count-l">Yrs Learning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SKILLS ══════════════ -->
+<section id="skills">
+  <div class="section-code-bg">import pandas as pd
+import numpy as np
+from sklearn.ensemble import (
+  RandomForestClassifier,
+  GradientBoostingRegressor
+)
+from tensorflow import keras
+import torch.nn as nn
+
+model = RandomForestClassifier(
+  n_estimators=200,
+  max_depth=12,
+  random_state=42
+)
+model.fit(X_train, y_train)
+score = model.score(X_test, y_test)
+# accuracy: 0.974 ✓</div>
+  <div class="skills-header">
+    <div>
+      <div class="s-label r"><span class="s-num">02</span>&nbsp; Tech Stack</div>
+      <h2 class="big-title r d1">My<br>Toolkit</h2>
+    </div>
+    <p class="skills-intro-text r d2">
+      A curated set of languages, frameworks, and platforms I use to build intelligent, production-ready systems — from raw data to deployed product.
+    </p>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-block r d1">
+      <span class="skill-bg-letter">Py</span>
+      <span class="skill-icon">🐍</span>
+      <div class="skill-name">Python</div>
+      <div class="skill-sub">Core language for all ML & data work</div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="95"></div></div>
+        <span class="skill-pct-label">95%</span>
+      </div>
+    </div>
+    <div class="skill-block r d2">
+      <span class="skill-icon">🤖</span>
+      <div class="skill-name">Machine Learning</div>
+      <div class="skill-sub">Scikit-learn · XGBoost · SVMs · RF</div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="88"></div></div>
+        <span class="skill-pct-label">88%</span>
+      </div>
+    </div>
+    <div class="skill-block r d3">
+      <span class="skill-icon">🧠</span>
+      <div class="skill-name">Deep Learning</div>
+      <div class="skill-sub">TensorFlow · Keras · Neural Nets</div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="80"></div></div>
+        <span class="skill-pct-label">80%</span>
+      </div>
+    </div>
+    <div class="skill-block r d1">
+      <span class="skill-icon">💬</span>
+      <div class="skill-name">NLP & LLMs</div>
+      <div class="skill-sub">NLTK · Transformers · OpenAI · RAG</div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="78"></div></div>
+        <span class="skill-pct-label">78%</span>
+      </div>
+    </div>
+    <div class="skill-block r d2">
+      <span class="skill-icon">📊</span>
+      <div class="skill-name">Data Analysis</div>
+      <div class="skill-sub">Pandas · NumPy · Matplotlib · Seaborn</div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="93"></div></div>
+        <span class="skill-pct-label">93%</span>
+      </div>
+    </div>
+    <div class="skill-block r d3">
+      <span class="skill-icon">🗄️</span>
+      <div class="skill-name">SQL & Databases</div>
+      <div class="skill-sub">PostgreSQL · SQLite · MySQL</div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="84"></div></div>
+        <span class="skill-pct-label">84%</span>
+      </div>
+    </div>
+    <div class="skill-block r d1">
+      <span class="skill-icon">⚡</span>
+      <div class="skill-name">Web Development</div>
+      <div class="skill-sub">HTML · CSS · JS · Flask · FastAPI</div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="88"></div></div>
+        <span class="skill-pct-label">88%</span>
+      </div>
+    </div>
+    <div class="skill-block r d2">
+      <span class="skill-icon">📈</span>
+      <div class="skill-name">BI & Visualization</div>
+      <div class="skill-sub">Power BI · Tableau · Plotly</div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="76"></div></div>
+        <span class="skill-pct-label">76%</span>
+      </div>
+    </div>
+    <div class="skill-block r d3">
+      <span class="skill-icon">☁️</span>
+      <div class="skill-name">Cloud & DevOps</div>
+      <div class="skill-sub">AWS basics · GCP · Git · GitHub</div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="67"></div></div>
+        <span class="skill-pct-label">67%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROJECTS ══════════════ -->
+<section id="projects">
+  <div class="projects-intro">
+    <div>
+      <div class="s-label r"><span class="s-num">03</span>&nbsp; Selected Work</div>
+      <h2 class="big-title r d1">Projects</h2>
+    </div>
+    <a href="#contact" class="projects-view-all r d2">All Projects →</a>
+  </div>
+
+  <div class="bento r d2">
+    <!-- FEATURED -->
+    <div class="bento-card">
+      <div class="bento-featured-badge">★ Featured</div>
+      <div class="bento-visual">
+        <div class="bento-glow bg1"></div>
+        <div class="bento-emoji">🧠</div>
+        <div class="bento-hover-overlay">
+          <a href="#" class="b-btn ac">Live Demo ↗</a>
+          <a href="#" class="b-btn gh">GitHub</a>
+        </div>
+      </div>
+      <div class="bento-body">
+        <div class="bento-num">01 — Featured</div>
+        <div class="bento-title">Predictive AI Dashboard</div>
+        <div class="bento-desc">End-to-end ML pipeline: real-time ingestion → model training → live dashboard. 96% accuracy with auto-retraining. Built for business decision-making at scale.</div>
+        <div class="bento-tags">
+          <span class="b-tag">Python</span><span class="b-tag">Scikit-learn</span>
+          <span class="b-tag">Flask</span><span class="b-tag">PostgreSQL</span>
+          <span class="b-tag">Chart.js</span><span class="b-tag">Pandas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bento-card">
+      <div class="bento-visual">
+        <div class="bento-glow bg2"></div>
+        <div class="bento-emoji">💬</div>
+        <div class="bento-hover-overlay">
+          <a href="#" class="b-btn ac">Demo ↗</a>
+          <a href="#" class="b-btn gh">GitHub</a>
+        </div>
+      </div>
+      <div class="bento-body">
+        <div class="bento-num">02</div>
+        <div class="bento-title">NLP Sentiment Engine</div>
+        <div class="bento-desc">Multi-class sentiment model processing 10k+ entries/min via REST API. Trained on social media data.</div>
+        <div class="bento-tags">
+          <span class="b-tag">Transformers</span><span class="b-tag">FastAPI</span><span class="b-tag">NLTK</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bento-card">
+      <div class="bento-visual">
+        <div class="bento-glow bg3"></div>
+        <div class="bento-emoji">📈</div>
+        <div class="bento-hover-overlay">
+          <a href="#" class="b-btn ac">Demo ↗</a>
+          <a href="#" class="b-btn gh">GitHub</a>
+        </div>
+      </div>
+      <div class="bento-body">
+        <div class="bento-num">03</div>
+        <div class="bento-title">Sales Forecasting Suite</div>
+        <div class="bento-desc">Time-series forecasting for e-commerce client. ARIMA + Prophet. 92% accuracy on monthly revenue.</div>
+        <div class="bento-tags">
+          <span class="b-tag">Prophet</span><span class="b-tag">ARIMA</span><span class="b-tag">Power BI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bento-card">
+      <div class="bento-visual">
+        <div class="bento-glow bg4"></div>
+        <div class="bento-emoji">👁️</div>
+        <div class="bento-hover-overlay">
+          <a href="#" class="b-btn ac">Demo ↗</a>
+          <a href="#" class="b-btn gh">GitHub</a>
+        </div>
+      </div>
+      <div class="bento-body">
+        <div class="bento-num">04</div>
+        <div class="bento-title">CV Defect Detection</div>
+        <div class="bento-desc">Manufacturing QC system using fine-tuned CNN on custom dataset. 94% precision defect detection.</div>
+        <div class="bento-tags">
+          <span class="b-tag">TensorFlow</span><span class="b-tag">OpenCV</span><span class="b-tag">CNN</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bento-card">
+      <div class="bento-visual">
+        <div class="bento-glow bg5"></div>
+        <div class="bento-emoji">🌐</div>
+        <div class="bento-hover-overlay">
+          <a href="#" class="b-btn ac">Demo ↗</a>
+          <a href="#" class="b-btn gh">GitHub</a>
+        </div>
+      </div>
+      <div class="bento-body">
+        <div class="bento-num">05</div>
+        <div class="bento-title">Orryzen Platform</div>
+        <div class="bento-desc">Full-stack client portal with AI-generated insights, automated reporting, and admin dashboard.</div>
+        <div class="bento-tags">
+          <span class="b-tag">Flask</span><span class="b-tag">SQLite</span><span class="b-tag">OpenAI API</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ORRYZEN ══════════════ -->
+<section id="orryzen">
+  <div class="orryzen-header">
+    <div class="s-label r"><span class="s-num">04</span>&nbsp; My Startup</div>
+    <div class="orryzen-brand r d1">
+      <div class="orryzen-mark">⚡</div>
+      <div class="orryzen-wm">ORRYZEN</div>
+    </div>
+    <h2 class="orryzen-statement r d2">
+      Intelligence<br>
+      <span class="hollow">Meets</span><br>
+      <span class="ac">Execution</span>
+    </h2>
+  </div>
+
+  <div class="orryzen-acid-band r d2">
+    <div class="orryzen-band-track">
+      <span class="orryzen-band-item">AI Solutions <span class="orryzen-band-sep"></span></span>
+      <span class="orryzen-band-item">Web Development <span class="orryzen-band-sep"></span></span>
+      <span class="orryzen-band-item">Data Analytics <span class="orryzen-band-sep"></span></span>
+      <span class="orryzen-band-item">Machine Learning <span class="orryzen-band-sep"></span></span>
+      <span class="orryzen-band-item">Orryzen <span class="orryzen-band-sep"></span></span>
+      <span class="orryzen-band-item">AI Solutions <span class="orryzen-band-sep"></span></span>
+      <span class="orryzen-band-item">Web Development <span class="orryzen-band-sep"></span></span>
+      <span class="orryzen-band-item">Data Analytics <span class="orryzen-band-sep"></span></span>
+      <span class="orryzen-band-item">Machine Learning <span class="orryzen-band-sep"></span></span>
+      <span class="orryzen-band-item">Orryzen <span class="orryzen-band-sep"></span></span>
+    </div>
+  </div>
+
+  <div class="services-layout r d3">    <div class="svc-card">
+      <div class="svc-num">01</div>
+      <div class="svc-icon">🤖</div>
+      <div class="svc-title">AI Solutions</div>
+      <div class="svc-desc">Custom ML and AI products built specifically for your business problem — from proof of concept to production deployment.</div>
+      <ul class="svc-list">
+        <li>Predictive Analytics Models</li>
+        <li>NLP & Chatbot Systems</li>
+        <li>Computer Vision Apps</li>
+        <li>LLM Fine-tuning & Integration</li>
+        <li>AI-Powered Automation</li>
+      </ul>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">02</div>
+      <div class="svc-icon">💻</div>
+      <div class="svc-title">Web Development</div>
+      <div class="svc-desc">Modern, performant web applications built to convert visitors and scale with your business.</div>
+      <ul class="svc-list">
+        <li>Custom Web Applications</li>
+        <li>Admin Dashboards & Portals</li>
+        <li>Landing Pages & SaaS UIs</li>
+        <li>REST API Design</li>
+        <li>Performance Optimization</li>
+      </ul>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">03</div>
+      <div class="svc-icon">📊</div>
+      <div class="svc-title">Data Analytics</div>
+      <div class="svc-desc">Turn messy data into clean dashboards and strategic insights that actually inform decisions.</div>
+      <ul class="svc-list">
+        <li>Data Engineering & Cleaning</li>
+        <li>BI Dashboards (Power BI/Tableau)</li>
+        <li>Customer Segmentation</li>
+        <li>A/B Testing & Analysis</li>
+        <li>Automated Reporting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ EXPERIENCE ══════════════ -->
+<section id="experience">
+  <div class="s-label r"><span class="s-num">05</span>&nbsp; Journey</div>
+  <h2 class="big-title r d1">How I<br>Got Here</h2>
+
+  <div class="timeline">
+    <div class="tl-item r d2">
+      <div class="tl-left">
+        <div class="tl-year">2024 — Now</div>
+        <div class="tl-company">Orryzen</div>
+      </div>
+      <div class="tl-right">
+        <div class="tl-role">Founder & Lead Data Scientist</div>
+        <div class="tl-desc">Built Orryzen from the ground up — leading product development, client delivery, and team growth. Delivering AI, web, and analytics solutions across multiple industries. Every product we ship is something I'm proud of.</div>
+      </div>
+    </div>
+
+    <div class="tl-item r d3">
+      <div class="tl-left">
+        <div class="tl-year">2023 — 2024</div>
+        <div class="tl-company">Self-Employed</div>
+      </div>
+      <div class="tl-right">
+        <div class="tl-role">Freelance Data Scientist</div>
+        <div class="tl-desc">Completed 10+ freelance ML and data science projects. Built real production systems for real clients with real deadlines. This is where I learned that shipping beats perfect — and developed the discipline to do both.</div>
+      </div>
+    </div>
+
+    <div class="tl-item r d4">
+      <div class="tl-left">
+        <div class="tl-year">2022 — 2025</div>
+        <div class="tl-company">University</div>
+      </div>
+      <div class="tl-right">
+        <div class="tl-role">BCA — Computer Applications</div>
+        <div class="tl-desc">Formal foundation in CS, algorithms, and software engineering. Used every spare hour to self-learn Python, ML, and product development. Graduated with both a degree and a running company.</div>
+      </div>
+    </div>
+
+    <div class="tl-item r d5">
+      <div class="tl-left">
+        <div class="tl-year">2021 — 2022</div>
+        <div class="tl-company">Origin Story</div>
+      </div>
+      <div class="tl-right">
+        <div class="tl-role">First Lines of Code → First ML Model</div>
+        <div class="tl-desc">Started with Python tutorials. Built a simple classifier. Got completely obsessed with what data could predict. Decided this would be my life's work. The rest followed naturally.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section id="contact">
+  <div class="s-label r"><span class="s-num">06</span>&nbsp; Get In Touch</div>
+  <h2 class="big-title r d1">Let's Build<br>Together</h2>
+
+  <div class="contact-layout">
+    <div class="r d2">
+      <a href="/cdn-cgi/l/email-protection#204d5553544855604f5252595a454e0e434f4d" class="contact-big-email">
+        musthu@<br>orryzen.com
+      </a>
+      <p class="contact-info-text">
+        Whether you need a data scientist on your team, want AI-powered solutions for your business, or have an idea worth building — reach out. I respond to every serious inquiry.
+      </p>
+      <div class="contact-meta">
+        <div class="c-meta-row">
+          <span class="c-meta-icon">📍</span>
+          India · Available Worldwide & Remote
+        </div>
+        <div class="c-meta-row">
+          <span class="c-meta-icon">⏰</span>
+          IST (UTC+5:30) · Usually responds within 24h
+        </div>
+        <div class="c-meta-row">
+          <span class="c-meta-icon">🚀</span>
+          Open to Freelance, Full-time & Collabs
+        </div>
+      </div>
+      <div class="socials">
+        <a href="#" class="soc-link" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="#" class="soc-link" title="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" class="soc-link" title="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="soc-link" title="Twitter/X">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form r d3">
+      <div class="cf-title">Send a Message</div>
+      <div class="cf-row">
+        <div class="cf-group">
+          <label class="cf-label" for="cf-name">Name</label>
+          <input type="text" id="cf-name" class="cf-input" placeholder="Your name">
+        </div>
+        <div class="cf-group">
+          <label class="cf-label" for="cf-email">Email</label>
+          <input type="email" id="cf-email" class="cf-input" placeholder="your@email.com">
+        </div>
+      </div>
+      <div class="cf-group">
+        <label class="cf-label" for="cf-subject">Subject</label>
+        <input type="text" id="cf-subject" class="cf-input" placeholder="What's this about?">
+      </div>
+      <div class="cf-group">
+        <label class="cf-label" for="cf-msg">Message</label>
+        <textarea id="cf-msg" class="cf-input" placeholder="Tell me about your project, role, or idea..."></textarea>
+      </div>
+      <button class="cf-submit" onclick="sendMsg(this)">Send Message →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="r">
+  <div class="footer-brand">MUSTHU · ORRYZEN</div>
+  <div class="footer-copy">© 2026 Musthu. All rights reserved.</div>
+  <nav class="footer-nav">
+    <a href="#hero">Top</a>
+    <a href="#about">About</a>
+    <a href="#projects">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</footer>
+
+<!-- ══════════════ JAVASCRIPT ══════════════ -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ═══ LOADER ═══ */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('out');
+    setTimeout(() => document.getElementById('loader').remove(), 700);
+  }, 2200);
+});
+
+/* ═══ CURSOR ═══ */
+const cDot = document.getElementById('c-cursor');
+const cRing = document.getElementById('c-follower');
+let cx = 0, cy = 0, fx = 0, fy = 0;
+
+document.addEventListener('mousemove', e => {
+  cx = e.clientX; cy = e.clientY;
+  cDot.style.left = cx + 'px'; cDot.style.top = cy + 'px';
+});
+(function animCursor() {
+  fx += (cx - fx) * 0.1; fy += (cy - fy) * 0.1;
+  cRing.style.left = fx + 'px'; cRing.style.top = fy + 'px';
+  requestAnimationFrame(animCursor);
+})();
+
+const hoverTargets = document.querySelectorAll('a, button, .bento-card, .svc-card, .skill-block, .chip');
+hoverTargets.forEach(el => {
+  el.addEventListener('mouseenter', () => cRing.classList.add('expand'));
+  el.addEventListener('mouseleave', () => cRing.classList.remove('expand'));
+});
+
+/* ═══ NAV ═══ */
+const nav = document.getElementById('navbar');
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-pill a');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('solid', window.scrollY > 40);
+
+  // Active link
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}, { passive: true });
+
+/* ═══ HAMBURGER ═══ */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+let mOpen = false;
+hamburger.addEventListener('click', () => {
+  mOpen = !mOpen;
+  mobileNav.classList.toggle('open', mOpen);
+  const sp = hamburger.querySelectorAll('span');
+  if (mOpen) {
+    sp[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+    sp[1].style.opacity = '0';
+    sp[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
+  } else {
+    sp.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+  }
+});
+mobileNav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    mOpen = false;
+    mobileNav.classList.remove('open');
+    hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+  });
+});
+
+/* ═══ SMOOTH SCROLL ═══ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+    }
+  });
+});
+
+/* ═══ REVEAL on SCROLL ═══ */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.r, .r-left, .r-right').forEach(el => revealObs.observe(el));
+
+/* ═══ SKILL BARS ═══ */
+const barObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.width = e.target.dataset.w + '%';
+      barObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.skill-bar-fill').forEach(b => barObs.observe(b));
+
+/* ═══ COUNTERS ═══ */
+function animCount(el, target, suffix = '+') {
+  let start = null;
+  const dur = 1600;
+  const step = ts => {
+    if (!start) start = ts;
+    const prog = Math.min((ts - start) / dur, 1);
+    const val = Math.round(prog < 1 ? (1 - Math.pow(1 - prog, 3)) * target : target);
+    el.textContent = val + suffix;
+    if (prog < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+const countObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      const target = parseInt(el.dataset.counter || el.dataset.target);
+      animCount(el, target);
+      countObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-counter], [data-target]').forEach(el => countObs.observe(el));
+
+/* ═══ PARALLAX (subtle) ═══ */
+const meshCircles = document.querySelectorAll('.mesh-circle');
+document.addEventListener('mousemove', e => {
+  const px = (e.clientX / window.innerWidth - 0.5) * 2;
+  const py = (e.clientY / window.innerHeight - 0.5) * 2;
+  meshCircles.forEach((m, i) => {
+    const f = (i + 1) * 15;
+    m.style.transform = `translate(${px * f}px, ${py * f}px)`;
+  });
+});
+
+/* ═══ FORM ═══ */
+function sendMsg(btn) {
+  const name = document.getElementById('cf-name').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const msg = document.getElementById('cf-msg').value.trim();
+  if (!name || !email || !msg) {
+    btn.style.background = '#ff3355';
+    btn.textContent = '⚠ Fill all required fields';
+    setTimeout(() => { btn.style.background = ''; btn.textContent = 'Send Message →'; }, 2200);
+    return;
+  }
+  btn.textContent = 'Sending...';
+  btn.style.opacity = '0.6';
+  setTimeout(() => {
+    btn.style.opacity = '1';
+    btn.style.background = '#00c870';
+    btn.textContent = '✓ Message Sent!';
+    ['cf-name','cf-email','cf-subject','cf-msg'].forEach(id => document.getElementById(id).value = '');
+    setTimeout(() => { btn.style.background = ''; btn.textContent = 'Send Message →'; }, 3200);
+  }, 1100);
+}
+
+/* ═══ BENTO CARD TILT ═══ */
+document.querySelectorAll('.bento-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `perspective(900px) rotateX(${-y * 5}deg) rotateY(${x * 5}deg)`;
+  });
+  card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+});
+
+/* ═══ CANVAS STARFIELD ═══ */
+(function() {
+  const canvas = document.getElementById('starfield');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, stars = [];
+  function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  for (let i = 0; i < 220; i++) {
+    stars.push({
+      x: Math.random() * 2000, y: Math.random() * 1200,
+      r: Math.random() * 1.3 + 0.15,
+      a: Math.random(),
+      da: (Math.random() * 0.004 + 0.001) * (Math.random() < 0.5 ? 1 : -1),
+      dx: (Math.random() - 0.5) * 0.06,
+      dy: (Math.random() - 0.5) * 0.06,
+      green: Math.random() < 0.12
+    });
+  }
+  (function draw() {
+    ctx.clearRect(0, 0, W, H);
+    stars.forEach(s => {
+      s.a += s.da;
+      if (s.a <= 0.05 || s.a >= 0.95) s.da *= -1;
+      s.x += s.dx; s.y += s.dy;
+      if (s.x < 0) s.x = W; if (s.x > W) s.x = 0;
+      if (s.y < 0) s.y = H; if (s.y > H) s.y = 0;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = s.green
+        ? `rgba(200,255,0,${s.a * 0.55})`
+        : `rgba(242,240,235,${s.a * 0.5})`;
+      ctx.fill();
+      if (s.r > 0.9 && s.a > 0.5) {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r * 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = s.green
+          ? `rgba(200,255,0,${s.a * 0.05})`
+          : `rgba(242,240,235,${s.a * 0.04})`;
+        ctx.fill();
+      }
+    });
+    requestAnimationFrame(draw);
+  })();
+})();
+
+/* ═══ LOADER PROGRESS ═══ */
+(function() {
+  const bar = document.getElementById('loaderBar');
+  const pct = document.getElementById('loaderPct');
+  if (!bar || !pct) return;
+  let prog = 0;
+  const iv = setInterval(() => {
+    prog += Math.random() * 16 + 5;
+    if (prog >= 100) { prog = 100; clearInterval(iv); }
+    bar.style.width = prog + '%';
+    pct.textContent = Math.floor(prog) + '%';
+  }, 110);
+})();
+
+/* ═══ SCROLL PROGRESS BAR ═══ */
+const scrollProg = document.getElementById('scroll-prog');
+window.addEventListener('scroll', () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  if (scrollProg && max > 0) scrollProg.style.width = (window.scrollY / max * 100) + '%';
+}, { passive: true });
+
+/* ═══ BACK TO TOP ═══ */
+const backTop = document.getElementById('back-top');
+if (backTop) {
+  window.addEventListener('scroll', () => {
+    backTop.classList.toggle('show', window.scrollY > 500);
+  }, { passive: true });
+}
+
+/* ═══ HERO CURSOR GLOW ═══ */
+const heroCursorGlow = document.getElementById('heroCursorGlow');
+const heroSec = document.getElementById('hero');
+if (heroCursorGlow && heroSec) {
+  heroSec.addEventListener('mousemove', e => {
+    heroCursorGlow.style.left = e.clientX + 'px';
+    heroCursorGlow.style.top  = e.clientY + 'px';
+  });
+}
+
+/* ═══ HERO PARTICLES CANVAS ═══ */
+(function initHeroParticles() {
+  const canvas = document.getElementById('hero-particles');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H;
+  function resize() {
+    W = canvas.width  = heroSec ? heroSec.offsetWidth  : window.innerWidth;
+    H = canvas.height = heroSec ? heroSec.offsetHeight : window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const particles = Array.from({ length: 55 }, () => mkP());
+  function mkP() {
+    return {
+      x: Math.random() * 2000, y: Math.random() * 1000,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: -Math.random() * 0.6 - 0.1,
+      life: Math.random(),
+      decay: Math.random() * 0.003 + 0.001,
+      r: Math.random() * 1.5 + 0.5,
+      green: Math.random() < 0.25,
+      isSquare: Math.random() < 0.15,
+    };
+  }
+  (function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach((p, i) => {
+      p.x += p.vx; p.y += p.vy; p.life -= p.decay;
+      if (p.life <= 0 || p.y < -20 || p.x < -20 || p.x > W + 20) {
+        particles[i] = mkP();
+        particles[i].y = H + 10;
+        particles[i].x = Math.random() * W;
+        return;
+      }
+      const alpha = Math.min(p.life * 1.5, 0.7);
+      if (p.isSquare) {
+        ctx.fillStyle = `rgba(200,255,0,${alpha * 0.35})`;
+        ctx.fillRect(p.x - p.r, p.y - p.r, p.r * 2, p.r * 2);
+      } else {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.green
+          ? `rgba(200,255,0,${alpha * 0.6})`
+          : `rgba(242,240,235,${alpha * 0.3})`;
+        ctx.fill();
+      }
+    });
+    requestAnimationFrame(draw);
+  })();
+})();
+
+/* ═══ HERO ROLE TYPING ═══ */
+(function roleType() {
+  const el = document.getElementById('heroRoleText');
+  if (!el) return;
+  const roles = ['Data Scientist', 'Founder of Orryzen', 'ML Engineer', 'AI Builder', 'Startup Founder'];
+  let ri = 0, ci = 0, deleting = false;
+  function tick() {
+    const cur = roles[ri];
+    if (!deleting) {
+      el.textContent = cur.slice(0, ci + 1);
+      ci++;
+      if (ci === cur.length) { deleting = true; setTimeout(tick, 2000); return; }
+      setTimeout(tick, 75);
+    } else {
+      el.textContent = cur.slice(0, ci - 1);
+      ci--;
+      if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; setTimeout(tick, 350); return; }
+      setTimeout(tick, 38);
+    }
+  }
+  setTimeout(tick, 2600);
+})();
+
+/* ═══ SKILL BLOCK MOUSE GLOW ═══ */
+document.querySelectorAll('.skill-block').forEach(block => {
+  block.addEventListener('mousemove', e => {
+    const rect = block.getBoundingClientRect();
+    block.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width * 100).toFixed(1) + '%');
+    block.style.setProperty('--my', ((e.clientY - rect.top) / rect.height * 100).toFixed(1) + '%');
+  });
+});
+
+/* ═══ SECTION CODE BG FADE IN ═══ */
+const codeBg = document.querySelector('.section-code-bg');
+if (codeBg) {
+  codeBg.style.opacity = '0';
+  new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      codeBg.style.transition = 'opacity 2.5s ease';
+      codeBg.style.opacity = '1';
+    }
+  }, { threshold: 0.15 }).observe(codeBg);
+}
+
+/* ═══ MAGNETIC BUTTONS ═══ */
+document.querySelectorAll('.cta-main, .nav-hire').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const rect = btn.getBoundingClientRect();
+    const dx = (e.clientX - (rect.left + rect.width / 2)) * 0.25;
+    const dy = (e.clientY - (rect.top + rect.height / 2)) * 0.25;
+    btn.style.transform = `translate(${dx}px,${dy}px) scale(1.04)`;
+  });
+  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+});
+
+/* ═══ CHIP STAGGER ANIMATION ═══ */
+const chipWrap = document.querySelector('.about-chips');
+if (chipWrap) {
+  const allChips = chipWrap.querySelectorAll('.chip');
+  allChips.forEach(c => {
+    c.style.opacity = '0';
+    c.style.transform = 'translateY(14px)';
+    c.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+  });
+  new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      allChips.forEach((c, i) => {
+        setTimeout(() => {
+          c.style.opacity = '1';
+          c.style.transform = 'none';
+        }, i * 55);
+      });
+    }
+  }, { threshold: 0.3 }).observe(chipWrap);
+}
+
+/* ═══ COUNTER FOR AV-CARDS ═══ */
+document.querySelectorAll('.av-card-num[data-target]').forEach(el => {
+  new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animCount(el, parseInt(el.dataset.target));
+    }
+  }, { threshold: 0.5 }).observe(el);
+});
+
+/* ═══ SVC CARD 3D TILT ═══ */
+document.querySelectorAll('.svc-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `perspective(900px) rotateX(${-y * 3}deg) rotateY(${x * 3}deg) translateY(-6px)`;
+  });
+  card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+});
+
+/* ═══ FOOTER BRAND EASTER EGG ═══ */
+const footerBrand = document.querySelector('.footer-brand');
+if (footerBrand) {
+  footerBrand.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+</script>
+</body>
+</html>
